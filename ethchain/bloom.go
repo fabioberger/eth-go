@@ -16,7 +16,7 @@ func NewBloomFilter(bin []byte) *BloomFilter {
 
 func (self *BloomFilter) Set(addr []byte) {
 	if len(addr) < 8 {
-		chainlogger.Warnf("err: bloom set to small: %x\n", addr)
+		chainlogger.Warnf("err: bloom set too small: %x\n", addr)
 
 		return
 	}
